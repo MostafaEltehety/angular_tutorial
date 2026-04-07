@@ -1,0 +1,33 @@
+<div>
+  <h4>One Way Data Binding</h4>
+  <div>
+    <p>1. Interpolation</p>
+    <p><b>{{topic}}</b> from {{name}}</p>
+  </div>
+  <div>
+    <p>2. Properity Binding</p>
+    <input [value]="topic">
+    <br>
+    <br>
+    <img [src]="image" height="200">
+  </div>
+  <br><br>
+  <div>
+    <p>3. Event Binding</p>
+    <button class="btn btn-primary" (click)="onSave()">Save</button>
+    <br><br>
+    <select (change)="onChange($event)" class="form-select form-select-md">
+      <option value="Egypt">Egypt</option>
+      <option value="Saudi Arabia">Saudi Arabia</option>
+      <option value="United Arab Emirates">United Arab Emirates</option>
+      <option value="Kuwait">Kuwait</option>
+      <option value="Qatar">Qatar</option>
+      <option value="Bahrain">Bahrain</option>
+    </select>
+  </div>
+  <br><br>
+    <h4>Two Way Data Binding</h4>
+    <br>
+    <input class="form-control"  [(ngModel)]="random">
+    {{random}}
+</div>
